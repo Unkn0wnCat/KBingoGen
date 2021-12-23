@@ -1,0 +1,10 @@
+
+$layoutWidth: 1200px;
+$layoutPadding: 20px;
+$layoutMenuHeight: 50px;
+
+@mixin layoutBox {
+    margin: 0 auto;
+    max-width: $layoutWidth;
+    padding: $layoutPadding;
+}

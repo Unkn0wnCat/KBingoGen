@@ -1,0 +1,13 @@
+@import "../global";
+
+.layout {
+    font-size: 1em;
+
+    &.navPlaceholder {
+        padding-top: $layoutMenuHeight;
+    }
+
+    .layoutBox {
+        @include layoutBox;
+    }
+}

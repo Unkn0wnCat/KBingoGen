@@ -1,0 +1,58 @@
+@import "../../global";
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background-color: var(--color-bg);
+
+    @supports(backdrop-filter: blur(10px)) {
+        background-color: var(--color-bg-milkglass);
+        backdrop-filter: blur(10px);
+    }
+
+    > nav {
+        display: flex;
+        height: $layoutMenuHeight;
+        max-width: $layoutWidth;
+        margin: 0 auto;
+
+        > a {
+            display: flex;
+            align-items: center;
+            padding: 0 $layoutPadding;
+            text-decoration: none;
+        }
+
+        .userMenuBtn {
+            margin-left: auto;
+            width: $layoutMenuHeight;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+
+            > div {
+                width: $layoutMenuHeight - 10px;
+                height: $layoutMenuHeight - 10px;
+                margin: 5px;
+                background-color: rgba(gray, .25);
+                background-position: center;
+                background-size: cover;
+                border-radius: 5px;
+                font-size: 2em;
+                text-align: center;
+                line-height: 40px;
+
+
+                > svg {
+                    width: 25px;
+                    height: 25px;
+                    margin: 7.5px;
+                }
+            }
+        }
+    }
+}

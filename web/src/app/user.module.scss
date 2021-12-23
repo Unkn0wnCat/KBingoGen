@@ -1,0 +1,54 @@
+@use "sass:math";
+@import "../global";
+
+.userPage {
+    .header {
+        display: flex;
+        
+        .picture {
+            width: 60px;
+            height: 60px;
+            margin: $layoutPadding;
+            margin-left: 0;
+            background-position: center;
+            background-size: cover;
+            border-radius: 5px;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .details {
+            h1 {
+                margin: 0;
+                margin-top: $layoutPadding;
+            }
+
+            .uid {
+                display: block;
+                opacity: .75;
+                margin-bottom: $layoutPadding;
+            }
+        }
+    }
+
+    .userActions {
+        display: flex;
+        flex-direction: column;
+
+        > button {
+            border: none;
+            border-bottom: thin solid rgba(gray, .25);
+            background-color: transparent;
+            padding: math.div($layoutPadding, 2) $layoutPadding;
+            display: flex;
+            align-items: center;
+            color: inherit;
+            
+            > svg {
+                margin-right: $layoutPadding;
+            }
+        }
+    }
+}
