@@ -7,6 +7,7 @@ import { PageProps } from "gatsby";
 import { FirebaseApp } from "firebase/app";
 import { AppContext } from "../../context/AppContext";
 import UserAppPage from "../../app/user";
+import SEO from "../../components/Seo/Seo";
 
 let NotFound = (props: RouteComponentProps) => <NotFoundComponent/>
 
@@ -51,10 +52,11 @@ const AppWithContext = ({app}: PageProps & {app: FirebaseApp}) => {
 
   return (
     <Layout>
-      <Router basepath="/app">
-        <UserAppPage path="/user" {...propPack} />
-        <NotFound default />
-      </Router>
+        <SEO title="App" />
+        <Router basepath="/app">
+            <UserAppPage path="/user" {...propPack} />
+            <NotFound default />
+        </Router>
     </Layout>
   )
 }
