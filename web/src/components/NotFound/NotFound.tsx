@@ -2,13 +2,8 @@ import { Link } from "gatsby";
 import React from "react";
 
 
-// styles
-const pageStyles = {
-    padding: "96px 0"
-  }
-
 const headingStyles = {
-  marginTop: 0,
+  marginTop: 24,
   marginBottom: 24,
   maxWidth: 320,
 }
@@ -18,7 +13,7 @@ const paragraphStyles = {
 }
 
 const NotFound = () => {
-    return <div style={pageStyles}>
+    return <div>
     <h1 style={headingStyles}>Page not found</h1>
       <p style={paragraphStyles}>
         Sorry{" "}
